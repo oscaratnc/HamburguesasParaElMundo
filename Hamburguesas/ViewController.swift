@@ -8,7 +8,18 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
+     let colores = Colores ()
+     let pais = ColeccionDePaises()
+     let hamburger = ColeccionDeHamburguesas()
+    
+    
+    
+    @IBOutlet weak var Pais: UILabel!
+    
+    @IBOutlet weak var Hamburger: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +32,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func HamburgerButton() {
+        
+        view.backgroundColor = colores.regresaAleatorio()
+        view.tintColor = colores.regresaAleatorio()
+        
+        Pais.text = pais.ObtenPais()
+        Hamburger.text = hamburger.ObtenHamburguesa()
+        
+    }
+  
 }
+
 
